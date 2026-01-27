@@ -1,5 +1,7 @@
 import { useTamboThreadInput, useTamboThread } from "@tambo-ai/react";
 import { useEffect, useRef, type FormEvent } from "react";
+import { BiBarChart, BiBot, BiUser, BiSend, BiLoaderCircle } from "react-icons/bi";
+import "./Chat.css";
 
 export const Chat = () => {
   const { value, setValue, submit, isPending } = useTamboThreadInput();
@@ -19,15 +21,8 @@ export const Chat = () => {
   }, [thread.messages, isPending]);
 
   return (
-    <div
-      className="chat-container"
-      style={{ height: "100%", display: "flex", flexDirection: "column" }}
-    >
-      <div
-        className="chat-messages"
-        ref={scrollRef}
-        style={{ flex: 1, overflowY: "auto" }}
-      >
+    <div className="chat-container">
+      <div className="chat-messages" ref={scrollRef}>
         {thread.messages.length === 0 ? (
           <div className="chat-empty">
             <div className="chat-empty-icon">
