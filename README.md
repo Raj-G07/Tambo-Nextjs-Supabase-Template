@@ -11,7 +11,7 @@ A production-ready community template for building AI-powered dashboards using *
 
 ## Tech Stack
 
-- **Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+- **Framework**: [Next.js 16 ](https://nextjs.org/)
 - **Database**: [Supabase](https://supabase.com/)
 - **AI SDK**: [Tambo](https://tambo.co/)
 - **Language**: TypeScript
