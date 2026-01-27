@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BiRefresh } from "react-icons/bi";
 import { Chat } from "../components/Chat";
 import { supabase } from "../lib/supabase";
 import "./dashboard.css";
@@ -68,6 +69,7 @@ export default function Dashboard() {
           <div className="section-header">
             <h2>Records</h2>
             <button onClick={fetchRecords} className="btn-refresh">
+              <BiRefresh size={18} />
               Refresh
             </button>
           </div>

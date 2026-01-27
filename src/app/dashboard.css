@@ -80,11 +80,10 @@ body {
 }
 
 .dashboard-grid {
-  display: grid;
-  grid-template-columns: 1fr 420px;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   flex: 1;
-  align-items: start;
 }
 
 .card {
@@ -144,6 +143,14 @@ body {
 
 .btn-refresh:active {
   transform: scale(0.98);
+}
+
+.btn-refresh svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-refresh:disabled svg {
+  animation: spin 1s linear infinite;
 }
 
 .table-wrapper {
@@ -242,9 +249,9 @@ td {
 
 /* Chat Column */
 .chat-column {
-  height: calc(100vh - 8rem);
-  position: sticky;
-  top: 2rem;
+  height: 600px;
+  position: static;
+  width: 100%;
 }
 
 .chat-card {
@@ -576,26 +583,14 @@ td {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .dashboard-grid {
-    grid-template-columns: 1fr 380px;
-    gap: 1.5rem;
-  }
-  
   .container {
     padding: 1.5rem;
   }
 }
 
 @media (max-width: 1024px) {
-  .dashboard-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .chat-column {
     height: 600px;
-    position: static;
-    top: auto;
   }
 
   .section-header h2 {

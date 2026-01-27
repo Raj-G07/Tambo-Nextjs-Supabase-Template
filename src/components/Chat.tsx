@@ -1,6 +1,12 @@
 import { useTamboThreadInput, useTamboThread } from "@tambo-ai/react";
 import { useEffect, useRef, type FormEvent } from "react";
-import { BiBarChart, BiBot, BiUser, BiSend, BiLoaderCircle } from "react-icons/bi";
+import {
+  BiBarChart,
+  BiBot,
+  BiUser,
+  BiSend,
+  BiLoaderCircle,
+} from "react-icons/bi";
 import "./Chat.css";
 
 export const Chat = () => {
@@ -26,19 +32,7 @@ export const Chat = () => {
         {thread.messages.length === 0 ? (
           <div className="chat-empty">
             <div className="chat-empty-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M3 3v18h18" />
-                <path d="M18 17V9" />
-                <path d="M13 17V5" />
-                <path d="M8 17v-3" />
-              </svg>
+              <BiBarChart size={48} />
             </div>
             <p className="chat-empty-title">Start a conversation</p>
             <p className="chat-empty-hint">
@@ -55,42 +49,9 @@ export const Chat = () => {
               >
                 <div className="message-avatar">
                   {message.role === "user" ? (
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                      <circle cx="12" cy="7" r="4" />
-                    </svg>
+                    <BiUser size={20} />
                   ) : (
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2a10 10 0 0 0-4.3 19.4" />
-                      <path d="M12 2a10 10 0 0 1 4.3 19.4" />
-                      <path d="M2 12h2.5" />
-                      <path d="M19.5 12H22" />
-                      <path d="M12 2v2.5" />
-                      <path d="M12 19.5V22" />
-                      <path d="M4.7 4.7l1.8 1.8" />
-                      <path d="M17.5 17.5l1.8 1.8" />
-                      <path d="M4.7 19.3l1.8-1.8" />
-                      <path d="M17.5 6.5l1.8-1.8" />
-                      <path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z" />
-                      <path d="M12 15a3 3 0 0 0 3-3" />
-                      <path d="M12 9a3 3 0 0 1-3 3" />
-                    </svg>
+                    <BiBot size={20} />
                   )}
                 </div>
                 <div className="message-wrapper">
@@ -116,30 +77,7 @@ export const Chat = () => {
             {isPending && (
               <div className="chat-message assistant">
                 <div className="message-avatar">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 2a10 10 0 0 0-4.3 19.4" />
-                    <path d="M12 2a10 10 0 0 1 4.3 19.4" />
-                    <path d="M2 12h2.5" />
-                    <path d="M19.5 12H22" />
-                    <path d="M12 2v2.5" />
-                    <path d="M12 19.5V22" />
-                    <path d="M4.7 4.7l1.8 1.8" />
-                    <path d="M17.5 17.5l1.8 1.8" />
-                    <path d="M4.7 19.3l1.8-1.8" />
-                    <path d="M17.5 6.5l1.8-1.8" />
-                    <path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z" />
-                    <path d="M12 15a3 3 0 0 0 3-3" />
-                    <path d="M12 9a3 3 0 0 1-3 3" />
-                  </svg>
+                  <BiBot size={20} />
                 </div>
                 <div className="message-wrapper">
                   <div className="message-content">
@@ -170,21 +108,7 @@ export const Chat = () => {
           className="chat-submit"
           aria-label="Send message"
         >
-          {isPending && (
-            <svg
-              className="animate-spin"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-            </svg>
-          )}
+          {isPending ? <BiLoaderCircle size={20} /> : <BiSend size={20} />}
         </button>
       </form>
     </div>
