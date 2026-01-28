@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   background: var(--bg-card);
+  width: 100%;
+  min-width: 0;
 }
 
 /* Chat Messages Section */
