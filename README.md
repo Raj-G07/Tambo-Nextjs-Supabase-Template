@@ -60,14 +60,15 @@ npm run dev
 ```
 ### 5. Demo Video
 
-- [Tambo+Nextjs+Supabase](https://youtu.be/-copk50gGIQ)
-
+- [Tambo+Nextjs+Supabase](https://youtu.be/U5AOfX0DVtA)
+  
 ### 6. Screenshots
- <img width="1295" height="635" alt="Screenshot 2026-01-27 184212" src="https://github.com/user-attachments/assets/03f85159-e0a7-4c80-b5c4-7172ff80cc87" />
- 
+ <img width="1363" height="597" alt="Screenshot 2026-01-28 062316" src="https://github.com/user-attachments/assets/f38f0fe9-7817-4d5b-b04d-0c3f54b93e8d" />
+
 ---
 
- <img width="1292" height="609" alt="Screenshot 2026-01-27 184233" src="https://github.com/user-attachments/assets/903655af-9d66-49a4-a839-f3266599061b" />
+ <img width="1365" height="601" alt="Screenshot 2026-01-28 062332" src="https://github.com/user-attachments/assets/b16cd817-7c8a-4c2e-ba43-0550ad36e38c" />
+
 
 ## How it Works
 
